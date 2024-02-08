@@ -2133,7 +2133,7 @@ GameObject:
   - component: {fileID: 247346185}
   - component: {fileID: 247346184}
   m_Layer: 5
-  m_Name: Start
+  m_Name: Pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2178,7 +2178,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start
+  m_text: Stop
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3311,7 +3311,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300066, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  m_Sprite: {fileID: 21300068, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5214,14 +5214,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8301887, g: 0.20754717, b: 0.20754717, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300014, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  m_Sprite: {fileID: 21300028, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6953,6 +6953,7 @@ MonoBehaviour:
   - {fileID: 1098002230}
   cashierPoints: []
   exitPoint: {fileID: 191096294}
+  moneyManager: {fileID: 0}
 --- !u!195 &943339233
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7305,6 +7306,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7386,6 +7388,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 40, y: -45, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c7e59b218a57a24c973f53907cf1098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profitAmountUI: {fileID: 1752779900}
 --- !u!1 &1008216002
 GameObject:
   m_ObjectHideFlags: 0
@@ -13918,8 +13933,11 @@ MonoBehaviour:
   customerSkins:
   - {fileID: 2027829407256024097, guid: 189b42f3114c8d642801577f28666017, type: 3}
   - {fileID: 3137652417171236930, guid: 88a8906a108306841ac1ac7ba239a81c, type: 3}
+  - {fileID: 7501788059647666026, guid: f21f4d03bc3dbf846b7c2f7aebadeb21, type: 3}
+  - {fileID: 6993270559495516286, guid: decf0710d03226642a9b225d3b0de587, type: 3}
+  - {fileID: 1616406060653692748, guid: f4d69c8dbb28a7343824a4fbb3438873, type: 3}
   minSpawnDelay: 4
-  maxSpawnDelay: 9
+  maxSpawnDelay: 14
 --- !u!1 &1828876373
 GameObject:
   m_ObjectHideFlags: 0

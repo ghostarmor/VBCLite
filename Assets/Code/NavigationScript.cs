@@ -26,15 +26,22 @@ public class NavigationScript : MonoBehaviour
     private NavMeshAgent agent;
     private Animator animator;
     private CustomerState currentState = CustomerState.Searching;
-    private float waitTimeAtShelf = 2.0f; // Time to wait at the shelf
+    private float waitTimeAtShelf = 4.0f; // Time to wait at the shelf
     private float waitTimeAtCheckout = 3.0f; // Time to wait at the checkout
     private float waitTimer;
 
+    
+    private int minGroceryCheckout = 20;
 
+    private int maxGroceryCheckout = 65;
+
+    [SerializeField]
+    private MoneyManager moneyManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        moneyManager = Camera.main.GetComponent<MoneyManager>();
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>(); // Ensure the GameObject has an Animator component
         animator.SetBool("isMoving", true);
@@ -88,6 +95,8 @@ public class NavigationScript : MonoBehaviour
                     }
                     else
                     {
+                        int bill = Random.Range(minGroceryCheckout, maxGroceryCheckout);
+                        moneyManager.setWeeklyProfit(moneyManager.getCurrentWeeklyProfit()+ bill);
                         agent.destination = exitPoint.position;
                         currentState = CustomerState.Exiting;
                         animator.SetBool("isMoving", true);

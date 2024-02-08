@@ -168,3 +168,4 @@ MonoBehaviour:
   - {fileID: 2271639589822611868, guid: ed7aeb83f7031f34cbe34892999dc7a9, type: 3}
   - {fileID: 7502392828192055630, guid: 98074bcccb2aa124ca64fbc0e4652658, type: 3}
   exitPoint: {fileID: 2322066804576236749, guid: ff1f33022584c2143aa79d5bf6de305d, type: 3}
+  moneyManager: {fileID: 0}
